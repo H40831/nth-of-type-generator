@@ -148,7 +148,7 @@ const testArea = new Vue({
 	 		if(!selector.nthOf) {return;}
 	 		if(!n.selector) {return;}
 	 		return `
-	 			.target::${selector.nthOf}(${n.selector}) {
+	 			.target:${selector.nthOf}(${n.selector}) {
 	 				background-color: ${colors[randomColor()]};
 
 	 			}
