@@ -1,0 +1,122 @@
+body * {
+	font-family: 'Menlo','Monaco','Consolas','Sans-serif';
+	transition: .25s;
+	white-space: nowrap;
+}
+body {
+	margin: 0;
+	background: -moz-radial-gradient(#fff 65%,#dedede); 
+	background: -webkit-radial-gradient(#fff 65%,#dedede); 
+	background: radial-gradient(#fff 65%,#dedede); 
+}
+
+header {
+	height: 15vh;
+}
+header>*{
+	text-align: center;
+	margin: 0;
+	color: white;
+	background-color: #333; 
+	background: -moz-linear-gradient(to right,#000,#333 20%,#333 80%,#000); 
+	background: -webkit-linear-gradient(to right,#000,#333 20%,#333 80%,#000); 
+	background: linear-gradient(to right,#000,#333 20%,#333 80%,#000); 
+}
+#title {
+	font-size: 2.5em;
+	height:50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#inputArea {
+	box-sizing: border-box;
+	height:50%;
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main {
+	box-sizing: border-box;
+	width:100vw;
+	height:85vh;
+	padding: 5%;
+}
+#selector {
+	font-size: 1.2em;
+	display: inline-flex;
+	width: 20em;
+	flex-wrap: wrap;
+	text-align: left;
+	margin: 0 1vw 0 3vw;
+}
+#selector>.selectable {
+	flex-basis: 50%;
+}
+input[type="radio"] {
+	width: 0;
+	margin: 0;
+	opacity: 0;
+}
+input {
+	color: white;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	border-bottom: solid 1px white;
+	text-align: center;
+	font-size: 1.5em;
+}
+label {
+	outline: none;
+}
+#x, #y {
+	margin: 0 1.5vw;
+	width: 5vw;
+}
+#n {
+	font-size: 1.2em;
+}
+#n input {
+	width: 7vw;
+}
+
+input::placeholder {
+	color: white;
+}
+.selectable {
+    opacity: 0.5;
+}
+.selectable:hover, .selectable:focus-within, .selectable:checked, .inputed {
+	opacity: 1;
+}
+
+#testArea>div {
+	height: 100%;
+	list-style: none;
+	margin:0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.element {
+	flex-shrink:0;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	border-radius: 1vw;
+	background-color: gray;
+    font-weight: bold;
+	color: white;
+	box-sizing: border-box;
+	background-clip:content-box;
+	margin: .5vh .5vw;
+	user-select: none;
+}
+.notTarget {
+	color: rgba(255,255,255,0.4);
+}
+

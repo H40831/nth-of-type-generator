@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>nth-of-type generator</title>
+	<meta property="og:title" content="nth-of-type generator" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="ページのURL" />
+	<meta property="og:image" content="/ogImage.png" />
+	<meta property="og:site_name" content="nth-of-type generator" />
+	<meta property="og:description" content="CSSの疑似クラス nth-child / nth-last-child / nth-of-type / nty-last-of-type について、 感覚的に理解するためのジェネレータです。 CSSの学習にご活用ください。【使い方】1.縦方向に表示する要素の数を入力する。2.横方向に表示する要素の数を入力する。3.テストしたい擬似クラスを選択する。4.擬似クラスのカッコ内の指定方法を入力する。5.生成された要素をクリックすると、擬似クラスのカウント対象外に指定することができる。" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script src='vue.js'></script>  
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>	
+	<header>
+		<h1 id="title">nth-of-type generator</h1>
+		<nav id="inputArea">
+			<input id="y" class="selectable" :class="{inputed:inputed}" v-model="qty" placeholder="タテ" @input="isInput" @keydown.up="plus" @keydown.down="minus" @keyup="applyDom">
+			<input id="x" class="selectable" :class="{inputed:inputed}" v-model="qty" placeholder="ヨコ" @input="isInput" @keydown.up="plus" @keydown.down="minus" @keyup="applyDom">
+			<span id="selector">
+				<label class="forRadio selectable"  :class="{inputed:this.nthOf==='nth-child'}">
+					<input type="radio" id="nthChild" value="nth-child" v-model="nthOf">nth-child
+				</label>
+
+				<label class="forRadio selectable"  :class="{inputed:this.nthOf==='nth-of-type'}">
+					<input type="radio" id="nthOfType" value="nth-of-type" v-model="nthOf">nth-of-type
+				</label>
+
+				<label class="forRadio selectable"  :class="{inputed:this.nthOf==='nth-last-child'}">
+					<input type="radio" id="nthLastChild" value="nth-last-child" v-model="nthOf">nth-last-child
+				</label>
+
+				<label class="forRadio selectable"  :class="{inputed:this.nthOf==='nth-last-of-type'}">
+					<input type="radio" id="nthLastOfType" value="nth-last-of-type" v-model="nthOf">nth-last-of-type
+				</label>
+			</span>
+			<span id="n" class="selectable" :class="{inputed:inputed}">(
+			<input v-model="selector" placeholder=" " @input="isInput">
+			)</span>
+		</nav>
+	</header>
+
+	<main id="testArea">
+		<style type="text/css">
+			{{ style }}
+		</style>
+		<div v-html="element">
+		</div>
+	</main>
+
+	<script src='index.js'></script>
+</body>
+</html>
