@@ -12,6 +12,7 @@ body {
 
 header {
 	height: 15vh;
+	overflow: hidden;
 }
 header>*{
 	text-align: center;
