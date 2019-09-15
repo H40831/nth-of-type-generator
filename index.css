@@ -12,7 +12,6 @@ body {
 
 header {
 	height: 15vh;
-	overflow: hidden;
 }
 header>*{
 	text-align: center;
@@ -142,16 +141,15 @@ input::placeholder {
 	}
 	#inputArea {
 		height:50%;
-		justify-content: initial;
 	}
 	#x,#y,#n {
-		font-size: 2em;
+		font-size: 1.8em;
 		width: 10vw; 
 	}
 	#selector {
 		text-align: center;
 		margin: 0;
-		font-size: 1.6em;
+		font-size: 1.4em;
 		line-height: 1.6;
 		margin-right: 1em;
 	}
