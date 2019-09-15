@@ -145,6 +145,7 @@ input::placeholder {
 	#x,#y,#n {
 		font-size: 1.8em;
 		width: 10vw; 
+		margin-left:0;
 	}
 	#selector {
 		text-align: center;
